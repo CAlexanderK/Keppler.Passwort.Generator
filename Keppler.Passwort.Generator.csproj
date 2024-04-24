@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="keppler_Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="keppler_Logo.png" />
+  </ItemGroup>
+
 </Project>
