@@ -5,36 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Keppler.Passwort.Generator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="800">
+        Title="Keppler.Passwort.Generator" Height="400" Width="800"
+        Background="LightGray">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="3*" />
-            <RowDefinition Height="3*" />
-            <RowDefinition Height="3*" />
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="2*" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="4*" />
+            <RowDefinition Height="2.5*" />
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="7*" />
-            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="8*" />
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="6.25*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
-        
+
+        <CheckBox Name="cb_CaseOne" Content="Zahlen"
+                  Grid.Column="2" Grid.Row="2"
+                  HorizontalAlignment="left" VerticalAlignment="center"/>
+
+        <CheckBox Name="cb_CaseTwo" Content="Großbuchstaben"
+                  Grid.Column="2" Grid.Row="3"
+                  HorizontalAlignment="left" VerticalAlignment="center"/>
+
+        <CheckBox Name="cb_CaseThree" Content="Kleinbuchstaben"
+                  Grid.Column="2" Grid.Row="4"
+                  HorizontalAlignment="left" VerticalAlignment="center"/>
+
+        <CheckBox Name="cb_CaseFour" Content="Sonderzeichen"
+                  Grid.Column="2" Grid.Row="5"
+                  HorizontalAlignment="left" VerticalAlignment="center"/>
+
+        <TextBox Name="txt_Amount"
+                  Grid.Column="5" Grid.Row="2"/>
+
+        <TextBox Name="txt_GeneratedPassword"
+                 Grid.Column="2" Grid.Row="11"
+                 Grid.ColumnSpan="6"/>
+
+        <Label Name="lbl_Anzahl" Content="Anzahl:" 
+               Grid.Column="4" Grid.Row="2"
+               HorizontalAlignment="left" VerticalAlignment="center" />
+
+        <Label Name="lbl_ErrorMessage"  
+               Grid.Column="3" Grid.Row="9"
+               HorizontalAlignment="left" VerticalAlignment="center" />
+
+        <Button Name="btn_Generate" Content="Generieren"
+                Grid.Column="7" Grid.Row="7" />
+
+        <Button Name="btn_Reset" Content="Zurücksetzen"
+                Grid.Column="7" Grid.Row="9" />
+
+        <Image Name="img_Logo" Source="Keppler_Logo.png"
+               Grid.Column="7" Grid.Row="2"
+               Grid.RowSpan="4"
+               HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+
     </Grid>
 </Window>
