@@ -291,8 +291,7 @@ namespace Keppler.Passwort.Generator
             }
             else if (number == 34)
             {
-                // Fall nachfragen "
-                return "";
+                return "\"";
             }
             else if (number == 35)
             {
@@ -380,8 +379,7 @@ namespace Keppler.Passwort.Generator
             }
             else if (number == 92)
             {
-                // Fall nachfragen \
-                return "";
+                return "\\";
             }
             else if (number == 93)
             {
@@ -429,6 +427,9 @@ namespace Keppler.Passwort.Generator
             switch (_switch)
             {
                 case 0: // 0000
+                    lbl_ErrorMessage.Content = "Bitte wählen Sie eine Möglichkeit!";
+                    txt_GeneratedPassword.Text = "";
+                    Reset();
                     break;
                 case 1: // 0001
                     int number1 = random.Next(1,5);
@@ -672,9 +673,13 @@ namespace Keppler.Passwort.Generator
 
             txt_GeneratedPassword.Text = string.Empty;
 
-            if (false) // noch überarbeiten!!!
+            bool _error = ErrorMessageCheck();
+
+            if (_error == true)
             {
-                
+                lbl_ErrorMessage.Content = "Bitte geben Sie eine positive Zahl ein!";
+                txt_GeneratedPassword.Text = "";
+                Reset();
             }
             else 
             {
@@ -756,6 +761,11 @@ namespace Keppler.Passwort.Generator
 
         private void btn_Reset_Click(object sender, RoutedEventArgs e)
         {
+            Reset();
+        }
+
+        public void Reset() 
+        {
             _numberTrueOrFalse = false;
             _letterBigTrueOrFalse = false;
             _letterSmallTrueOrFalse = false;
@@ -767,16 +777,18 @@ namespace Keppler.Passwort.Generator
             txt_GeneratedPassword.Text = "";
         }
 
-        public bool _errorMessageCheck()
+        public bool ErrorMessageCheck()
         {
-            bool _error = true;
+            bool _error = false;
 
             try 
             {
-                
+                uint _anzahlText = Convert.ToUInt32(txt_Amount.Text);
             }
             catch
-            { }
+            { 
+                _error = true;
+            }
 
             return _error;
         }
