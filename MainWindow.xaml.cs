@@ -753,5 +753,32 @@ namespace Keppler.Passwort.Generator
 
             }
         }
+
+        private void btn_Reset_Click(object sender, RoutedEventArgs e)
+        {
+            _numberTrueOrFalse = false;
+            _letterBigTrueOrFalse = false;
+            _letterSmallTrueOrFalse = false;
+            _specialCharacterTrueOrFalse = false;
+            cb_CaseOne.IsChecked = false;
+            cb_CaseTwo.IsChecked = false;
+            cb_CaseThree.IsChecked = false;
+            cb_CaseFour.IsChecked = false;
+            txt_GeneratedPassword.Text = "";
+        }
+
+        public bool _errorMessageCheck()
+        {
+            bool _error = true;
+
+            try 
+            {
+                
+            }
+            catch
+            { }
+
+            return _error;
+        }
     }
 }

@@ -104,7 +104,7 @@
                 Foreground="#1657E6"
                 Background="Snow"
                 BorderBrush="#1657E6"
-                Grid.Column="7" Grid.Row="9" />
+                Grid.Column="6" Grid.Row="9" Grid.ColumnSpan="3" Height="37" Margin="29,0,29,0" VerticalAlignment="Top" Click="btn_Reset_Click" />
 
         <Image Name="img_Logo" Source="keppler_Logo.png"
                Grid.Column="7" Grid.Row="2"
