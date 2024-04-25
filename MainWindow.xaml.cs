@@ -424,55 +424,132 @@ namespace Keppler.Passwort.Generator
 
         public string GeneratePasswort(int _switch) 
         {
+            string _character;
             switch (_switch)
             {
-
-                case 0:
-
+                case 0: // 0000
                     break;
-                case 1:
+                case 1: // 0001
 
                     break;
-                case 2:
-
+                case 2: // 0010
+                    int number2 = random.Next(97,123);
+                    _character = GeneratingPasswordCharacterASCII(number2);
                     break;
-                case 3:
+                case 3: // 0011
                     
                     break;
-                case 4:
+                case 4: // 0100
+                    int number4 = random.Next(65,91);
+                    _character = GeneratingPasswordCharacterASCII(number4);
+                    break;
+                case 5: // 0101
+                    int number5 = random.Next(1,4);
+                    if (number5 == 1)
+                    {
+                        int number51 = random.Next(33,48);
+                        _character = GeneratingPasswordCharacterASCII(number51);
+                    }
+                    else if (number5 == 2)
+                    {
+                        int number52 = random.Next(58,97);
+                        _character = GeneratingPasswordCharacterASCII(number52);
+                    }
+                    else if (number5 == 3)
+                    {
+                        int number53 = random.Next(123,127);
+                        _character = GeneratingPasswordCharacterASCII(number53);
+                    }
+                    break;
+                case 6: // 0110
+                    int number6 = random.Next(1, 3);
+                    if (number6 == 1)
+                    {
+                        int number61 = random.Next(65, 91);
+                        _character = GeneratingPasswordCharacterASCII(number61);
+                    }
+                    else if (number6 == 2)
+                    {
+                        int number62 = random.Next(97, 123);
+                        _character = GeneratingPasswordCharacterASCII(number62);
+                    }
+                    break;
+                case 7: // 0111
+                    int number7 = random.Next(1,3);
+                    if (number7 == 1)
+                    {
+                        int number71 = random.Next(,);
+                        _character = GeneratingPasswordCharacterASCII(number71);
+                    }
+                    else if (number7 == 2)
+                    {
+                        int number72 = random.Next(,);
+                        _character = GeneratingPasswordCharacterASCII(number72);
+                    }
+                    break;
+                case 8: // 1000
+                    int number8 = random.Next(48,58);
+                    _character = GeneratingPasswordCharacterASCII(number8);
+                    break;
+                case 9: // 1001
                     
                     break;
-                case 5:
+                case 10: // 1010
+                    int number10 = random.Next(1, 3);
+                    if (number10 == 1)
+                    {
+                        int number101 = random.Next(48,58);
+                        _character = GeneratingPasswordCharacterASCII(number101);
+                    }
+                    else if (number10 == 2)
+                    {
+                        int number102 = random.Next(97,123);
+                        _character = GeneratingPasswordCharacterASCII(number102);
+                    }
+                    break;
+                case 11: // 1011
+                    int number11 = random.Next(1, 3);
+                    if (number11 == 1)
+                    {
+                        int number111 = random.Next(33,65);
+                        _character = GeneratingPasswordCharacterASCII(number111);
+                    }
+                    else if (number11 == 2)
+                    {
+                        int number112 = random.Next(91,127);
+                        _character = GeneratingPasswordCharacterASCII(number112);
+                    }
+                    break;
+                case 12: // 1100
+                    int number12 = random.Next(1, 3);
+                    if (number12 == 1)
+                    {
+                        int number121 = random.Next(48,58);
+                        _character = GeneratingPasswordCharacterASCII(number121);
+                    }
+                    else if (number12 == 2)
+                    {
+                        int number122 = random.Next(65,91);
+                        _character = GeneratingPasswordCharacterASCII(number122);
+                    }
+                    break;
+                case 13: // 1101
+                    int number = random.Next(1, 3);
+                    if (number == 1)
+                    {
+                        int number = random.Next(33,97);
+                        _character = GeneratingPasswordCharacterASCII(number);
+                    }
+                    else if (number == 2)
+                    {
+                        int number = random.Next(123,127);
+                        _character = GeneratingPasswordCharacterASCII(number);
+                    }
+                    break;
+                case 14: // 1110
                     
                     break;
-                case 6:
-                    
-                    break;
-                case 7:
-                    
-                    break;
-                case 8:
-                    
-                    break;
-                case 9:
-                    
-                    break;
-                case 10:
-                    
-                    break;
-                case 11:
-                    
-                    break;
-                case 12:
-                    
-                    break;
-                case 13:
-                    
-                    break;
-                case 14:
-                    
-                    break;
-                case 15:
+                case 15: // 1111
                     
                     break;
                 default:
@@ -528,7 +605,7 @@ namespace Keppler.Passwort.Generator
 
             txt_GeneratedPassword.Text = string.Empty;
 
-            if (true)
+            if (false)
             {
                 
             }
