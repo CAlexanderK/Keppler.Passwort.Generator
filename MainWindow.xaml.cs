@@ -24,6 +24,8 @@ namespace Keppler.Passwort.Generator
         public int _number = 0;
         public string _character = "";
 
+        Random random = new Random();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -420,6 +422,66 @@ namespace Keppler.Passwort.Generator
             }
         }
 
+        public string GeneratePasswort(int _switch) 
+        {
+            switch (_switch)
+            {
+
+                case 0:
+
+                    break;
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                    
+                    break;
+                case 4:
+                    
+                    break;
+                case 5:
+                    
+                    break;
+                case 6:
+                    
+                    break;
+                case 7:
+                    
+                    break;
+                case 8:
+                    
+                    break;
+                case 9:
+                    
+                    break;
+                case 10:
+                    
+                    break;
+                case 11:
+                    
+                    break;
+                case 12:
+                    
+                    break;
+                case 13:
+                    
+                    break;
+                case 14:
+                    
+                    break;
+                case 15:
+                    
+                    break;
+                default:
+
+                    break;
+            }
+            return _character;
+        }
+
         public void cbCaseOne_Checked(object sender, RoutedEventArgs e)
         {
             _numberTrueOrFalse = true;
@@ -460,6 +522,92 @@ namespace Keppler.Passwort.Generator
             _specialCharacterTrueOrFalse = false;
         }
 
+        private void btn_Generate_Click(object sender, RoutedEventArgs e)
+        {
+            int _amount = Convert.ToInt32(txt_Amount.Text);
 
+            txt_GeneratedPassword.Text = string.Empty;
+
+            if (true)
+            {
+                
+            }
+            else 
+            {
+                for (int index = 0; index < _amount; index++)
+                {
+                    int _switch = 0;   
+                    
+                    if (!_numberTrueOrFalse && !_letterBigTrueOrFalse && !_letterSmallTrueOrFalse && !_specialCharacterTrueOrFalse) // 0000 = 0
+                    {
+                        _switch = 0;
+                    }
+                    else if (!_numberTrueOrFalse && !_letterBigTrueOrFalse && !_letterSmallTrueOrFalse && _specialCharacterTrueOrFalse) // 0001 = 1
+                    {
+                        _switch = 1;
+                    }
+                    else if (!_numberTrueOrFalse && !_letterBigTrueOrFalse && _letterSmallTrueOrFalse && !_specialCharacterTrueOrFalse) // 0010 = 2
+                    {
+                        _switch = 2;
+                    }
+                    else if (!_numberTrueOrFalse && !_letterBigTrueOrFalse && _letterSmallTrueOrFalse && _specialCharacterTrueOrFalse)
+                    {
+                        _switch = 3;
+                    }
+                    else if (!_numberTrueOrFalse && _letterBigTrueOrFalse && !_letterSmallTrueOrFalse && !_specialCharacterTrueOrFalse)
+                    {
+                        _switch = 4;
+                    }
+                    else if (!_numberTrueOrFalse && _letterBigTrueOrFalse && !_letterSmallTrueOrFalse && _specialCharacterTrueOrFalse)
+                    {
+                        _switch = 5;
+                    }
+                    else if (!_numberTrueOrFalse && _letterBigTrueOrFalse && _letterSmallTrueOrFalse && !_specialCharacterTrueOrFalse)
+                    {
+                        _switch = 6;
+                    }
+                    else if (!_numberTrueOrFalse && _letterBigTrueOrFalse && _letterSmallTrueOrFalse && _specialCharacterTrueOrFalse)
+                    {
+                        _switch = 7;
+                    }
+                    else if (_numberTrueOrFalse && !_letterBigTrueOrFalse && !_letterSmallTrueOrFalse && !_specialCharacterTrueOrFalse)
+                    {
+                        _switch = 8;
+                    }
+                    else if (_numberTrueOrFalse && !_letterBigTrueOrFalse && !_letterSmallTrueOrFalse && _specialCharacterTrueOrFalse)
+                    {
+                        _switch = 9;
+                    }
+                    else if (_numberTrueOrFalse && !_letterBigTrueOrFalse && _letterSmallTrueOrFalse && !_specialCharacterTrueOrFalse)
+                    {
+                        _switch = 10;
+                    }
+                    else if (_numberTrueOrFalse && _letterBigTrueOrFalse && _letterSmallTrueOrFalse && _specialCharacterTrueOrFalse)
+                    {
+                        _switch = 11;
+                    }
+                    else if (_numberTrueOrFalse && _letterBigTrueOrFalse && !_letterSmallTrueOrFalse && !_specialCharacterTrueOrFalse)
+                    {
+                        _switch = 12;
+                    }
+                    else if (_numberTrueOrFalse && _letterBigTrueOrFalse && !_letterSmallTrueOrFalse && _specialCharacterTrueOrFalse)
+                    {
+                        _switch = 13;
+                    }
+                    else if (_numberTrueOrFalse && _letterBigTrueOrFalse && _letterSmallTrueOrFalse && !_specialCharacterTrueOrFalse)
+                    {
+                        _switch = 14;
+                    }
+                    else if (_numberTrueOrFalse && _letterBigTrueOrFalse && _letterSmallTrueOrFalse && _specialCharacterTrueOrFalse)
+                    {
+                        _switch = 15;
+                    }
+
+                    string _character = GeneratePasswort(_switch);
+                    txt_GeneratedPassword.Text = txt_GeneratedPassword.Text + _character;
+                }
+
+            }
+        }
     }
 }

@@ -97,7 +97,7 @@
                 Foreground="#1657E6"
                 Background="Snow"
                 BorderBrush="#1657E6"
-                Grid.Column="7" Grid.Row="7" />
+                Grid.Column="7" Grid.Row="7" Click="btn_Generate_Click" />
 
         <Button Name="btn_Reset" Content="Zurücksetzen"
                 FontSize="16"
