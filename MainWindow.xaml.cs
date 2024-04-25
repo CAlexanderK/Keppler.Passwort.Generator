@@ -424,20 +424,56 @@ namespace Keppler.Passwort.Generator
 
         public string GeneratePasswort(int _switch) 
         {
-            string _character;
+            string _character = "";
+
             switch (_switch)
             {
                 case 0: // 0000
                     break;
                 case 1: // 0001
-
+                    int number1 = random.Next(1,5);
+                    if (number1 == 1)
+                    {
+                        number1 = random.Next(33,48);
+                        _character = GeneratingPasswordCharacterASCII(number1);
+                    }
+                    else if (number1 == 2)
+                    {
+                        number1 = random.Next(58,65);
+                        _character = GeneratingPasswordCharacterASCII(number1);
+                    }
+                    else if (number1 == 3)
+                    {
+                        number1 = random.Next(91,97);
+                        _character = GeneratingPasswordCharacterASCII(number1);
+                    }
+                    else if (number1 == 4)
+                    {
+                        number1 = random.Next(123,127);
+                        _character = GeneratingPasswordCharacterASCII(number1);
+                    }
                     break;
                 case 2: // 0010
                     int number2 = random.Next(97,123);
                     _character = GeneratingPasswordCharacterASCII(number2);
                     break;
                 case 3: // 0011
-                    
+                    int number3 = random.Next(1, 4);
+                    if (number3 == 1)
+                    {
+                        int number31 = random.Next(33,48);
+                        _character = GeneratingPasswordCharacterASCII(number31);
+                    }
+                    else if (number3 == 2)
+                    {
+                        int number32 = random.Next(58,65);
+                        _character = GeneratingPasswordCharacterASCII(number32);
+                    }
+                    else if (number3 == 3)
+                    {
+                        int number33 = random.Next(91,127);
+                        _character = GeneratingPasswordCharacterASCII(number33);
+                    }
                     break;
                 case 4: // 0100
                     int number4 = random.Next(65,91);
@@ -478,12 +514,12 @@ namespace Keppler.Passwort.Generator
                     int number7 = random.Next(1,3);
                     if (number7 == 1)
                     {
-                        int number71 = random.Next(,);
+                        int number71 = random.Next(33,48);
                         _character = GeneratingPasswordCharacterASCII(number71);
                     }
                     else if (number7 == 2)
                     {
-                        int number72 = random.Next(,);
+                        int number72 = random.Next(58,127);
                         _character = GeneratingPasswordCharacterASCII(number72);
                     }
                     break;
@@ -492,7 +528,22 @@ namespace Keppler.Passwort.Generator
                     _character = GeneratingPasswordCharacterASCII(number8);
                     break;
                 case 9: // 1001
-                    
+                    int number9 = random.Next(1, 4);
+                    if (number9 == 1)
+                    {
+                        int number91 = random.Next(33,65);
+                        _character = GeneratingPasswordCharacterASCII(number91);
+                    }
+                    else if (number9 == 2)
+                    {
+                        int number92 = random.Next(91,97);
+                        _character = GeneratingPasswordCharacterASCII(number92);
+                    }
+                    else if (number9 == 3)
+                    {
+                        int number93 = random.Next(123,127);
+                        _character = GeneratingPasswordCharacterASCII(number93);
+                    }
                     break;
                 case 10: // 1010
                     int number10 = random.Next(1, 3);
@@ -537,20 +588,36 @@ namespace Keppler.Passwort.Generator
                     int number = random.Next(1, 3);
                     if (number == 1)
                     {
-                        int number = random.Next(33,97);
+                        number = random.Next(33,97);
                         _character = GeneratingPasswordCharacterASCII(number);
                     }
                     else if (number == 2)
                     {
-                        int number = random.Next(123,127);
+                        number = random.Next(123,127);
                         _character = GeneratingPasswordCharacterASCII(number);
                     }
                     break;
                 case 14: // 1110
-                    
+                    int number14 = random.Next(1, 4);
+                    if (number14 == 1)
+                    {
+                        int number141 = random.Next(48,58);
+                        _character = GeneratingPasswordCharacterASCII(number141);
+                    }
+                    else if (number14 == 2)
+                    {
+                        int number142 = random.Next(65,91);
+                        _character = GeneratingPasswordCharacterASCII(number142);
+                    }
+                    else if (number14 == 3)
+                    {
+                        int number143 = random.Next(97,123);
+                        _character = GeneratingPasswordCharacterASCII(number143);
+                    }
                     break;
                 case 15: // 1111
-                    
+                    int number15 = random.Next(33,127);
+                    _character = GeneratingPasswordCharacterASCII(number15);
                     break;
                 default:
 
@@ -605,7 +672,7 @@ namespace Keppler.Passwort.Generator
 
             txt_GeneratedPassword.Text = string.Empty;
 
-            if (false)
+            if (false) // noch überarbeiten!!!
             {
                 
             }
